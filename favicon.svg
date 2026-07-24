@@ -1,8 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <defs><linearGradient id="bgkr-p" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#e65100"/><stop offset="100%" stop-color="#1b5e20"/>
-  </linearGradient></defs>
-  <rect width="32" height="32" rx="6" fill="url(#bgkr-p)"/>
-  <polygon points="4,5 28,16 4,27 14,16" fill="rgba(230,81,0,0.9)" stroke="rgba(27,94,32,0.6)" stroke-width="2"/>
-  <text x="16" y="21" text-anchor="middle" fill="#fff" font-size="8" font-weight="700" font-family="system-ui">KR</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img">
+  <title>여의도 마사지 가격비교</title>
+  <rect width="64" height="64" rx="17" fill="hsl(330 70% 34%)"/>
+  <g transform="rotate(0 32 32)"><rect x="14" y="34" width="9" height="16" rx="2" fill="hsl(330 24% 96%)"/><rect x="27" y="26" width="9" height="24" rx="2" fill="hsl(330 24% 96%)"/><rect x="40" y="16" width="9" height="34" rx="2" fill="hsl(136 68% 64%)"/></g>
 </svg>
