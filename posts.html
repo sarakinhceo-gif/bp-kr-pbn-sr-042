@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · kr-pbn-sr-042</title>
+  <meta name="description" content="kr-pbn-sr-042에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://yeouido-body-trend.node-link.shop/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+ html {
+ font-size: 16px;
+ scroll-behavior: smooth;
+ }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+ background-color: #fafafa;
+ color: #1d1d1f;
+ line-height: 1.6;
+ }
+ img, svg {
+ max-width: 100%;
+ height: auto;
+ display: block;
+ }
+ a {
+ color: #0071e3;
+ text-decoration: none;
+ transition: color 0.2s ease;
+ }
+ a:hover {
+ color: #004b9a;
+ }
+ ul {
+ list-style: none;
+ }
+ .container {
+ max-width: 980px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ /* 헤더 & 네비게이션 */
+ header {
+ background-color: #ffffff;
+ border-bottom: 1px solid #e8e8ed;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+ }
+ .nav-wrap {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 12px 24px;
+ max-width: 980px;
+ margin: 0 auto;
+ }
+ .logo {
+ font-size: 1.25rem;
+ font-weight: 700;
+ color: #1d1d1f;
+ letter-spacing: -0.5px;
+ }
+ .nav-links {
+ display: flex;
+ gap: 28px;
+ align-items: center;
+ }
+ .nav-links a {
+ font-size: 0.9rem;
+ font-weight: 500;
+ color: #515154;
+ padding: 6px 0;
+ border-bottom: 2px solid transparent;
+ transition: border-color 0.2s ease, color 0.2s ease;
+ }
+ .nav-links a:hover {
+ color: #1d1d1f;
+ border-bottom-color: #0071e3;
+ }
+ .nav-cta {
+ background-color: #0071e3;
+ color: #ffffff !important;
+ padding: 8px 20px !important;
+ border-radius: 24px;
+ font-weight: 600;
+ font-size: 0.85rem;
+ border: none;
+ transition: background-color 0.2s ease;
+ }
+ .nav-cta:hover {
+ background-color: #004b9a;
+ border-bottom-color: transparent !important;
+ }
+ /* 모바일 햄버거 */
+ .hamburger-menu {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 4px;
+ }
+ .hamburger-menu span {
+ width: 24px;
+ height: 2px;
+ background-color: #1d1d1f;
+ border-radius: 2px;
+ transition: all 0.3s ease;
+ }
+ /* 반응형 */
+ @media (max-width: 768px) {
+ .nav-links {
+ display: none;
+ flex-direction: column;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background-color: #ffffff;
+ padding: 16px 24px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+ gap: 16px;
+ border-bottom: 1px solid #e8e8ed;
+ }
+ .nav-links.active {
+ display: flex;
+ }
+ .hamburger-menu {
+ display: flex;
+ }
+ .nav-cta {
+ align-self: flex-start;
+ }
+ .container {
+ padding: 0 16px;
+ }
+ }
+ /* 페이지 콘텐츠 */
+ .page-section {
+ padding: 60px 0;
+ }
+ .page-title {
+ font-size: 2.4rem;
+ font-weight: 700;
+ letter-spacing: -0.5px;
+ margin-bottom: 12px;
+ color: #1d1d1f;
+ }
+ .page-subtitle {
+ font-size: 1.1rem;
+ color: #6e6e73;
+ margin-bottom: 40px;
+ max-width: 700px;
+ }
+ .info-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 32px;
+ margin-bottom: 48px;
+ }
+ .info-card {
+ background-color: #ffffff;
+ border-radius: 16px;
+ padding: 28px;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+ border: 1px solid #e8e8ed;
+ transition: box-shadow 0.3s ease;
+ }
+ .info-card:hover {
+ box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+ }
+ .info-card h3 {
+ font-size: 1.35rem;
+ font-weight: 600;
+ margin-bottom: 16px;
+ color: #1d1d1f;
+ }
+ .info-card p {
+ color: #515154;
+ font-size: 0.95rem;
+ line-height: 1.7;
+ }
+ .info-card ul {
+ margin-top: 12px;
+ }
+ .info-card ul li {
+ padding: 6px 0;
+ padding-left: 20px;
+ position: relative;
+ color: #515154;
+ font-size: 0.95rem;
+ }
+ .info-card ul li::before {
+ content: "•";
+ position: absolute;
+ left: 4px;
+ color: #0071e3;
+ font-weight: bold;
+ }
+ .highlight-box {
+ background-color: #f5f5f7;
+ border-radius: 16px;
+ padding: 32px;
+ margin: 40px 0;
+ border-left: 4px solid #0071e3;
+ }
+ .highlight-box h3 {
+ font-size: 1.3rem;
+ margin-bottom: 12px;
+ color: #1d1d1f;
+ }
+ .highlight-box p {
+ color: #515154;
+ font-size: 1rem;
+ }
+ .faq-list {
+ margin-top: 48px;
+ }
+ .faq-item {
+ border-bottom: 1px solid #e8e8ed;
+ padding: 20px 0;
+ }
+ .faq-item:first-child {
+ border-top: 1px solid #e8e8ed;
+ }
+ .faq-question {
+ font-weight: 600;
+ font-size: 1.05rem;
+ color: #1d1d1f;
+ margin-bottom: 8px;
+ cursor: default;
+ }
+ .faq-answer {
+ color: #515154;
+ font-size: 0.95rem;
+ line-height: 1.7;
+ }
+ .tel-link {
+ display: inline-block;
+ background-color: #0071e3;
+ color: #ffffff;
+ padding: 12px 28px;
+ border-radius: 30px;
+ font-weight: 600;
+ font-size: 1rem;
+ margin-top: 16px;
+ transition: background-color 0.2s ease;
+ }
+ .tel-link:hover {
+ background-color: #004b9a;
+ color: #ffffff;
+ }
+ @media (max-width: 768px) {
+ .info-grid {
+ grid-template-columns: 1fr;
+ gap: 20px;
+ }
+ .page-title {
+ font-size: 1.8rem;
+ }
+ .page-subtitle {
+ font-size: 1rem;
+ }
+ }
+ footer {
+ text-align: center;
+ padding: 32px 24px;
+ color: #86868b;
+ font-size: 0.85rem;
+ border-top: 1px solid #e8e8ed;
+ margin-top: 40px;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · kr-pbn-sr-042">
+  <meta property="og:description" content="kr-pbn-sr-042에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://yeouido-body-trend.node-link.shop/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="nav-wrap">
+ <div class="logo">여의도 마사지 가격비교</div>
+ <button class="hamburger-menu" aria-label="메뉴 열기" onclick="this.classList.toggle('active'); document.querySelector('.nav-links').classList.toggle('active');">
+ 
+ 
+ 
+ </button>
+ <nav class="nav-links">
+ <a href="/">홈</a>
+ <a href="/info" style="border-bottom-color: #0071e3; color: #1d1d1f;">정보</a>
+ <a href="/pricing">가격</a>
+ <a href="/reviews">후기</a>
+ 
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260704-144.html">강서 노래방 투어: 깔끔한 시설과 서비스가 만족스러운 최신 스팟</a>
+        <p class="post-item__summary">강서 주변에서 가창력을 뽐내며 신나는 회식을 마무리하고자 한다면, 음향 시설이 잘 튜닝된 최신식 노래연습장을 선택하는 것이 만족스럽습니다. 매장에 따라 무료 음료 이벤트 등을 제공하는 곳도 있습니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1191.html">여의도 직장인을 위한 부위별 맞춤 마사지 선택 가이드</a>
+        <p class="post-item__summary">여의도는 수많은 금융 기관과 기업이 밀집한 곳으로 사무 업무를 보는 직장인이 많은 만큼 근육 피로를 호소하는 경우가 잦습니다. 마사지를 받기 전 본인의 상태에 따라 어떤 부위를 집중적으로 관리할지 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-584.html">여의도 마사지 시간대별 가격 변동성과 예약 효율</a>
+        <p class="post-item__summary">여의도 마사지 샵들의 가격표를 뜯어보면 단순히 코스별로 나뉜 게 아니라 시간대에 따라 보이지 않는 차등락이 존재한다. 보통 직장인 수요가 몰리는 평일 저녁이나 주말보다는 평일 낮 시간대에 가격 혜택</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0248.html">여의도 마사지 가격비교 시 구글 알고리즘 고신용 도메인 보증 카드 발급 중요성</a>
+        <p class="post-item__summary">여의도 마사지 가격비교 정보를 찾는 사용자들은 높은 품질의 서비스를 합리적인 비용에 이용하고 싶어 합니다. 이는 비단 마사지 샵의 접근성 문제뿐만 아니라 디지털 환경에서도 동일하게 적용되는 원리입니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0249.html">여의도 마사지 가격비교를 통한 구글 틈새 키워드 트래픽 외환 거래 전략 활용법</a>
+        <p class="post-item__summary">여의도 마사지 가격비교를 검색하는 사용자들은 합리적인 소비를 지향하지만, 이와 유사한 논리로 디지털 환경에서 수익을 창출하려는 시도도 늘고 있습니다. 특정 분야의 트래픽을 분석하여 가치가 저평가된 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0250.html">여의도 마사지 가격비교 분석과 상세 안내 활용</a>
+        <p class="post-item__summary">흔히 검색 엔진의 페널티는 한번 받으면 되돌릴 수 없다는 오해가 퍼져 있습니다. 하지만 여의도 마사지 가격비교와 같은 정보를 다루는 사이트라도 알고리즘의 원리만 정확히 파악한다면 충분히 복구 가능합</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0251.html">여의도 마사지 가격비교 후 살펴보는 셔츠룸 예약 및 모임 인원 구성의 조건</a>
+        <p class="post-item__summary">쾌적한 환경에서 모임을 가지기 위해서는 몇 가지 충족 조건이 필요합니다. 여의도 마사지 가격비교만큼이나 중요하게 고려해야 할 점은 장소의 분위기와 인원 수용 능력입니다. 인원이 4인에서 8인 사이라</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0252.html">여의도 마사지 가격비교 기준과 마포 단체 회식용 대형 룸 노래방 가격 정보 비교</a>
+        <p class="post-item__summary">성공적인 회식을 계획할 때 어떤 요소를 가장 먼저 고려하시나요? 여의도 마사지 가격비교를 꼼꼼히 확인하는 것처럼 대규모 인원을 수용할 수 있는 업체를 찾는 과정도 전략이 필요합니다. 특히 마포 지역</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0253.html">여의도 마사지 가격비교를 통한 4</a>
+        <p class="post-item__summary">여의도 마사지 가격비교를 검색하는 과정과 IT 기술을 습득하는 과정은 데이터의 신뢰도를 판별한다는 점에서 놀라운 공통점을 지닙니다. 무분별한 정보 속에서 알짜배기 지식을 선별하는 것은 효율적인 비즈</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0254.html">여의도 마사지 가격비교와 정보 페이지의 상관관계</a>
+        <p class="post-item__summary">여의도 마사지 가격비교를 할 때 우리가 가장 고민하는 것은 과연 제시된 가격에 합당한 서비스가 제공되는가 하는 점입니다. 디지털 생태계에서도 마찬가지로 저렴한 서비스와 고품질의 서비스 중 하나를 선</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0255.html">여의도 마사지 가격비교 시 주의할 점과 도메인 지수 탈모 방지 및 앵커 텍스트 이식 가이드</a>
+        <p class="post-item__summary">여의도 마사지 가격비교를 할 때 예약 과정에서 정보를 제대로 확인하지 않아 낭패를 보는 경우가 종종 있습니다. 디지털 마케팅에서도 이와 비슷하게 초기 단계를 소홀히 하여 사이트의 지수가 하락하는 현</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0256.html">여의도 마사지 가격비교와 마포 홍대 로컬 럭셔리 밤문화 가이드의 접근성 체크리스트</a>
+        <p class="post-item__summary">여의도 마사지 가격비교를 통해 합리적인 소비를 하려는 마음은 마포 홍대 로컬 럭셔리 밤문화 가이드를 찾는 사람들의 심리와도 일맥상통합니다. 특정 지역의 인프라를 효율적으로 이용하기 위해서는 사전에 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0257.html">여의도 마사지 가격비교 분석 후 마포 럭셔리 단체 가라오케 예약 가이드 실천하기</a>
+        <p class="post-item__summary">오랜만에 팀원들과의 회식 자리를 준비하다 보면 장소 선택부터 난관에 봉착하는 경우가 많습니다. 단순히 여의도 마사지 가격비교를 통해 피로를 풀 곳을 찾는 것만큼이나 중요한 것이 바로 품격 있는 단체</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0258.html">여의도 마사지 가격비교 이후 구글 신뢰 지수 모발이식 솔루션 및 정보력 강화</a>
+        <p class="post-item__summary">많은 이들이 인터넷에 떠도는 정보만으로 의료 서비스의 질을 판단할 수 있다고 오해합니다. 마치 여의도 마사지 가격비교 리스트를 훑는 것만으로 실력을 단정 짓는 것과 같습니다. 의료나 전문 영역은 단</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0259.html">여의도 마사지 가격비교 관점에서 본 마포 유흥 투명 정찰제 가격 정보 디렉토리</a>
+        <p class="post-item__summary">쾌적한 업소를 선택하기 위해서는 시설 수준, 접근성, 그리고 서비스 만족도라는 세 가지 기본 조건이 충족되어야 합니다. 이는 여의도 마사지 가격비교를 할 때 고려하는 요소들과 상당히 유사합니다. 무</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0260.html">여의도 마사지 가격비교 만큼 중요한 마포/합정 인디 소셜 라운지 가이드 분석</a>
+        <p class="post-item__summary">혹시 당신은 일상 속에서 타인과 자연스럽게 교류할 수 있는 특별한 공간을 찾아 헤맨 적이 있습니까? 흔히 여의도 마사지 가격비교를 통해 심신의 안정을 꾀하는 것처럼, 감성적인 충전을 위해 소셜 라운</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0261.html">여의도 마사지 가격비교: 마포 셔츠룸 후기 소셜 마케팅 전략</a>
+        <p class="post-item__summary">여의도 마사지 가격비교를 통해 합리적인 선택을 하려는 분들께, 온라인 상의 후기들이 어떻게 마케팅 전략으로 활용되는지 알아보는 것은 중요합니다. 특히 마포 셔츠룸과 같은 업종에서는 소셜 마케팅이 큰</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0001.html">여의도 마사지 가격비교 분석으로 살펴보는 합정 셔츠룸 단골들이 뽑은 핫플 매거진 정보</a>
+        <p class="post-item__summary">평소 피로를 풀기 위해 여의도 마사지 가격비교 정보를 자주 찾아보던 직장인 A씨는 최근 합정 인근의 새로운 문화 공간에 관심을 가지게 되었습니다. 단순히 휴식만을 목적으로 하는 곳보다는 사람들과 교</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0002.html">여의도 마사지 가격비교 데이터와 연동된 마포 코인노래방 방음 시설 비교 가이드 활용법</a>
+        <p class="post-item__summary">많은 이들이 코인노래방은 시설이 천차만별이며 방음이 제대로 되지 않는다는 오해를 가지고 있습니다. 하지만 여의도 마사지 가격비교 정보를 정밀하게 비교하던 사용자들처럼, 마포의 음향 시설 또한 꼼꼼히</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0500.html">여의도 마사지 가격비교를 통한 구글 봇 정밀 검진 및 크롤 버짓 밀착 간호 전략</a>
+        <p class="post-item__summary">여러분은 여의도 마사지 가격비교를 위해 얼마나 많은 시간을 할애하고 계신가요? 매번 변하는 가격 체계와 업체별 서비스 품질 차이를 확인하는 것은 결코 쉬운 작업이 아닙니다. 이처럼 파편화된 정보를 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
